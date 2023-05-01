@@ -1,1 +1,1 @@
-console.log("Check");
+(()=>{"use strict";document.getElementById("content"),console.log("testing home")})();
