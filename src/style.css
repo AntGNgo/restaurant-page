@@ -4,3 +4,8 @@
   gap: 20px;
   text-transform: capitalize;
 }
+
+.nav-item {
+  border: solid 5px pink;
+  padding: 20px;
+}

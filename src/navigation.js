@@ -9,6 +9,7 @@ const navigation = (content) => {
 
   for (const [key, value] of Object.entries(liList)) {
     liList[`${key}`].textContent = key;
+    liList[`${key}`].classList.add("nav-item");
     ul.appendChild(liList[key]);
   }
   content.appendChild(ul);
