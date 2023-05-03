@@ -1,5 +1,8 @@
 const clearPage = (content) => {
-  removAllChildNodes(content);
+  while (content.firstChild) {
+    content.removeChild(content.firstChild);
+  }
+  // removeAllChildNodes(content);
 };
 
 export { clearPage };

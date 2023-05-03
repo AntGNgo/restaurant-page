@@ -1,4 +1,7 @@
+import { navigation } from "../navigation";
+
 const home = (content) => {
+  navigation(content);
   const div = document.createElement("div");
 
   const mainHeader = document
