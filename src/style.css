@@ -39,6 +39,18 @@ body {
   display: flex;
 }
 
+.home-container-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.home-container-left ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .home-container img {
   width: 25vw;
 }

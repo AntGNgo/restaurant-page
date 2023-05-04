@@ -9,6 +9,9 @@ const home = (content) => {
   const div = document.createElement("div");
   div.classList.add("home-container");
 
+  const leftDiv = document.createElement("div");
+  leftDiv.classList.add("home-container-left");
+
   // Create and populate element for home copy
   const homeCopy = document.createElement("p");
   homeCopy.textContent =
@@ -19,13 +22,39 @@ const home = (content) => {
   homeImg.src = restaurantImg;
 
   // Append copy and image to container
-  div.appendChild(homeCopy);
+  leftDiv.append(homeCopy);
+  div.appendChild(leftDiv);
   div.appendChild(homeImg);
 
   // Create hours table
   const hours = document.createElement("ul");
+  hours.classList.add("hours-list");
+
+  const createLi = (content) => {
+    let li = document.createElement("li");
+    // let liText = document.createTextNode(content);
+    // li.appendChild(liText);
+    li.textContent = content;
+    return li;
+  };
+
+  const hoursArr = [
+    "Sunday: 8-5",
+    "Monday: 8-5",
+    "Tuesday: 8-5",
+    "Wednesday: 8-5",
+    "Thurday: 8-5",
+    "Friday: 8-5",
+    "Saturday: 8-5",
+  ];
+
+  hoursArr.forEach((day) => {
+    let hourToAppend = createLi(day);
+    hours.appendChild(hourToAppend);
+  });
 
   // Append container to content div
+  leftDiv.appendChild(hours);
   content.appendChild(div);
 };
 
