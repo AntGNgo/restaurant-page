@@ -4,8 +4,11 @@ import { menu } from "./pages/menu";
 import { clearPage } from "./clearPage";
 
 const navigation = (content) => {
+  const nav = document.createElement("nav");
+  nav.classList.add("nav");
   const ul = document.createElement("ul");
-  ul.classList.add("nav");
+  nav.appendChild(ul);
+  ul.classList.add("nav-list");
   const liList = {
     home: document.createElement("li"),
     contact: document.createElement("li"),
@@ -45,7 +48,10 @@ const navigation = (content) => {
     menu(content);
   });
 
-  content.appendChild(ul);
+  const h1 = document.createElement("h1");
+  h1.textContent = "Ant's Breakfast";
+  nav.prepend(h1);
+  content.appendChild(nav);
 };
 
 export { navigation };
